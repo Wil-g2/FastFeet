@@ -1,5 +1,7 @@
 import express from 'express';
 import routes from './routes';
+import i18n from './config/i18n';
+
 
 class App {
   constructor() {
@@ -11,6 +13,16 @@ class App {
 
   middlewares() {
     this.server.use(express.json());
+    this.server.use(i18n.init);
+
+    //middeware apply languagem by query parameters 
+    this.server.use((req, res, next) => {
+      if (req.query.lang) {
+        i18n.setLocale(req.query.lang);
+      }
+      next();  
+    }); 
+
   }
 
   routes() {
