@@ -1,3 +1,4 @@
 {
-  "message": "Olá Mundo"
+  "message": "mensagem",
+  "ExistUserError": "Usuário já existe."
 }
