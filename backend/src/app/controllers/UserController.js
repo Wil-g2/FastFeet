@@ -13,7 +13,11 @@ class UserController {
       }
 
       const user = await User.create(req.body);
-      return res.json(user);
+      return res.json({
+        id: user.id,
+        name: user.name,
+        email: user.email
+      });
     }catch (error) {
       console.log(error);
     }
