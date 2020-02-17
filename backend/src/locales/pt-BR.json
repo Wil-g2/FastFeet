@@ -1,4 +1,6 @@
 {
   "message": "mensagem",
-  "ExistUserError": "Usuário já existe."
+  "ExistUserError": "Usuário já existe.",
+  "UserNotExistError": "Usuário não existe",
+  "UserPasswordError": "Senha não corresponde"
 }
