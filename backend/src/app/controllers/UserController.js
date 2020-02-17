@@ -1,5 +1,5 @@
-import User from '../models/User';
 import i18n from 'i18n';
+import User from '../models/User';
 
 class UserController {
   async store(req, res){
