@@ -2,5 +2,7 @@
   "message": "message",
   "ExistUserError": "User already exist.",
   "UserNotExistError": "User not exist",
-  "UserPasswordError": "Password does not match"
+  "UserPasswordError": "Password does not match",
+  "TokenNotProvided": "Token not provided",
+  "InvalidToken": "Invalid token"
 }
