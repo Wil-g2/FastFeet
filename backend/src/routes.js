@@ -11,7 +11,8 @@ routes.post('/users', UserController.store);
 routes.post('/sessions', SessionController.store);
 
 routes.use(authMiddleware);
-routes.get('/', (req, res) => {
-  return res.json({msg: i18n.__('message')});
-})
+
+routes.put('/users', UserController.update);
+
+
 export default routes;

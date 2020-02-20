@@ -5,7 +5,7 @@ class UserController {
   async store(req, res){
     try{
       const { email } = req.body;
-      console.log(email);
+
       const userExist = await User.findOne({ where: { email }});
 
       if (userExist) {
@@ -21,6 +21,34 @@ class UserController {
     }catch (error) {
       console.log(error);
     }
+
+  }
+
+  async update(req, res) {
+    const { email, oldPassword } = req.body;
+
+    const user = await User.findByPk(req.userId);
+
+    //verify new email is different and if email exist in database
+    if (email !== user.email) {
+      const userExist = await User.findOne({ where: { email }});
+      if (userExist) {
+        return res.status(400).json({ error: i18n.__('ExistUserError')});
+      }
+    }
+
+    //verify old passoword
+    if (oldPassword && !(await user.checkPassword(oldPassword))) {
+      return res.status(401).json({error: i18n.__('UserPasswordError') });
+    }
+
+    const { id, name } = await user.update(req.body);
+
+    return res.json({
+      id,
+      name,
+      email
+    })
 
   }
 }
