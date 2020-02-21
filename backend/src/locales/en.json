@@ -4,5 +4,6 @@
   "UserNotExistError": "User not exist",
   "UserPasswordError": "Password does not match",
   "TokenNotProvided": "Token not provided",
-  "InvalidToken": "Invalid token"
+  "InvalidToken": "Invalid token",
+  "ValidationErrosYup": "Validation fails"
 }
