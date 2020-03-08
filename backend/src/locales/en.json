@@ -5,5 +5,10 @@
   "UserPasswordError": "Password does not match",
   "TokenNotProvided": "Token not provided",
   "InvalidToken": "Invalid token",
-  "ValidationErrosYup": "Validation fails"
+  "ValidationErrosYup": "Validation fails",
+  "IdRequired": "Id is required",
+  "InvalidId" : "Invalid id",
+  "DeleteMessage" : "Item deleted with success",
+  "InvalidInsert" : "Invalid inserted data",
+  "InvalidParameters" : "Invalid parameters in request"
 }

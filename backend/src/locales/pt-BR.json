@@ -5,5 +5,10 @@
   "UserPasswordError": "Senha não corresponde",
   "TokenNotProvided": "Token não foi fornecido",
   "InvalidToken": "Token invalido",
-  "ValidationErrosYup": "Falha na validação"
+  "ValidationErrosYup": "Falha na validação",
+  "IdRequired": "id e obrigatório",
+  "InvalidId" : "Id inválido",
+  "DeleteMessage" : "Item deletado com sucesso",
+  "InvalidInsert" : "Dados para inserir inválidos",
+  "InvalidParameters" : "Parâmetros inválidos na request"
 }
